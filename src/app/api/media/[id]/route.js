@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 import { connectDB } from "@/lib/mongodb";
 import { MediaAsset } from "@/models/PlatformModels";
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 export async function GET(_req, { params }) {
   try {
