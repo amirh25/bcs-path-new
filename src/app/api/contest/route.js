@@ -21,7 +21,7 @@ import {
   NEGATIVE_MARK,
 } from "@/lib/examSchedule";
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 const SALT = process.env.STUDENT_KEY_SALT || process.env.ADMIN_SECRET_PIN || "bcs2026";
 const makeKey = (phone) =>

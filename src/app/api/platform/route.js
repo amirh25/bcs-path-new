@@ -6,7 +6,7 @@
  * NOTE: শিক্ষার্থীদের পরীক্ষা/রেজিস্ট্রেশন/লিডারবোর্ড এখন /api/contest এ।
  * ============================================================================
  */
-import { NextResponse } from "next/server";
+// import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import {
   Lecture,
