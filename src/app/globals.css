@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  color-scheme: light only !important;
+}
+
+html, body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  color-scheme: light only !important;
+}
+
+html, body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* World-Class Micro-Interactions & Smooth Card Hover Animations */
+.premium-card {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -10px rgba(30, 27, 75, 0.14), 0 4px 10px -4px rgba(30, 27, 75, 0.06);
+}
+
+.premium-btn {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.premium-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+.premium-btn:active {
+  transform: translateY(0px) scale(0.98);
+}

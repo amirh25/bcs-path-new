@@ -1,0 +1,44 @@
+
+/* ===== BCS-PATH-UPDATE-2: hover animations + editor image classes ===== */
+@media (prefers-reduced-motion: no-preference) {
+  div.cursor-pointer:not(.group),
+  label.cursor-pointer {
+    transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.22s ease,
+      border-color 0.22s ease, background-color 0.22s ease;
+  }
+  div.cursor-pointer:not(.group):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px -14px rgba(46, 16, 101, 0.35);
+  }
+  div.cursor-pointer:not(.group):active {
+    transform: translateY(-1px) scale(0.99);
+  }
+  button:not(:disabled) {
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  }
+  button:not(:disabled):hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow: 0 8px 16px -8px rgba(15, 23, 42, 0.4);
+  }
+  button:not(:disabled):active {
+    transform: scale(0.97);
+  }
+  header nav button:hover,
+  header nav button:active {
+    transform: none;
+    box-shadow: none;
+    filter: none;
+  }
+  @keyframes bpFadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  main > div { animation: bpFadeUp 0.35s ease backwards; }
+}
+
+/* এডিটরে যোগ করা ছবি (ছোট class দিয়ে — টেক্সটে লম্বা style লাগে না) */
+.bp-img { max-width: 100%; height: auto; border-radius: 12px; border: 2px solid #cbd5e1; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06); }
+.bp-img-left { float: left; width: 45%; max-width: 240px; margin: 4px 16px 10px 0; }
+.bp-img-right { float: right; width: 45%; max-width: 240px; margin: 4px 0 10px 16px; }
+.bp-img-top, .bp-img-bottom { display: block; width: 100%; max-width: 420px; margin: 14px auto; clear: both; }
